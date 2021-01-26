@@ -1,0 +1,26 @@
+#%RAML 1.0
+title: customer_api
+baseUri:
+types:
+  customer: !include customer.raml
+/customer:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include customer.json
+            type: customer[]
+  post:
+    body:
+      application/json:
+        example: !include customer.json
+    responses:
+      201:
+        body:
+          application/json:
+            example: !include customer.json
+            type: customer[]
+              
+          
+              
